@@ -25,7 +25,7 @@ export default function App() {
                 <a href="#Projects">Projects</a>
                 <a href="#Generative">Generative Art</a>
                 <a href="#Design">Graphic Design</a>
-                <a href="#Design">Gallery</a>
+                <a href="#/Gallery">Gallery</a>
             </nav>
 
             <MobileNav />

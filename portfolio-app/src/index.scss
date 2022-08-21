@@ -320,15 +320,7 @@ h1 {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-
-    &:after {
-        content: "";
-        margin-top: -22px;
-        margin-left: -20%;
-        margin-bottom: 48px;
-        width: 40vw;
-        border-top: 16px dashed white;
-    }
+    line-height: 128px;
 }
 
 h2 {
