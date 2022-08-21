@@ -18,8 +18,14 @@
 }
 
 .preview {
-    background-color: red;
     height: 100px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border: 2px dashed black;
+    }
 }
 
 #GenerativeGallery,
@@ -52,9 +58,34 @@
         .image {
             border: 2px solid black;
             width: 60%;
-            height: 95%;
+            height: 80%;
             margin-top: 1.25%;
             margin-left: 1.25%;
+            background-color: dimgray;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .legend {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            height: 12%;
+            width: 58%;
+
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            img {
+                height: 100%;
+                border: 1px solid black;
+                margin-right: 8px;
+            }
         }
 
         .about {

@@ -5,7 +5,7 @@ import "./index.scss";
 import "./gallery.scss";
 import "./noise.scss";
 import App from "./App";
-import Gallery from "./Gallery";
+import Gallery from "./gallery/Gallery";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
