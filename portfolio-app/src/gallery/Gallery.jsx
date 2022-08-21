@@ -62,6 +62,11 @@ export default class Gallery extends Component {
                 <div id="GenerativeGallery" className="section noisy">
                     <div className="content grid">
                         <h2 className="span--6">Generative Art</h2>
+                    </div>
+                </div>
+                <div id="DesignGallery" className="section noisy">
+                    <div className="content grid">
+                        <h2 className="span--6">Graphic Design</h2>
                         <div
                             className="preview span--1"
                             onClick={() =>
@@ -84,24 +89,13 @@ export default class Gallery extends Component {
                             }
                         >
                             <img src={Lukova1} alt="Luba Lukova"></img>
+                            <h4>Luba Lukova Booklet</h4>
                         </div>
-                    </div>
-                </div>
-                <div id="DesignGallery" className="section noisy">
-                    <div className="content grid">
-                        <h2 className="span--6">Graphic Design</h2>
-                        <div className="preview span--1">IMAGE</div>
-                        <div className="preview span--1">IMAGE</div>
-                        <div className="preview span--1">IMAGE</div>
-                        <div className="preview span--1">IMAGE</div>
                     </div>
                 </div>
                 <div id="OtherGallery" className="section noisy">
                     <div className="content grid">
                         <h2 className="span--6">Other</h2>
-                        <div className="preview span--1">IMAGE</div>
-                        <div className="preview span--1">IMAGE</div>
-                        <div className="preview span--1">IMAGE</div>
                     </div>
                 </div>
             </div>
