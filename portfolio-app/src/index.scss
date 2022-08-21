@@ -36,7 +36,7 @@
     width: 50px;
     height: 50px;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     color: white;
@@ -44,9 +44,10 @@
 
     svg {
         fill: white;
+        width: 40px;
 
         rect {
-            transition: transform 0.5s, scale 0.5s;
+            transition: transform 0.5s;
             transform-origin: center;
         }
 
@@ -57,7 +58,7 @@
             }
 
             .mid {
-                scale: 0;
+                transform: scale(0);
             }
 
             .bot {
@@ -179,11 +180,25 @@
 #Welcome {
     color: white;
 
-    a {
-        font-size: 24px;
-        font-weight: 500;
-        margin: 0px 8px;
-        color: white;
+    .section-description {
+        margin-top: 16px;
+        border-left: 6px dashed white;
+
+        p {
+            font-size: 24px;
+            margin-bottom: 16px;
+
+            a {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0px 8px;
+                color: white;
+            }
+        }
+
+        a {
+            color: white;
+        }
     }
 
     .headshot {
@@ -221,13 +236,27 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: flex-end;
 
         div {
             height: 300px;
             width: 100%;
             background-color: white;
         }
+    }
+}
+
+.section-description {
+    border-left: 2px dashed black;
+    padding-left: 16px;
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: black;
+        font-size: 32px;
     }
 }
 
@@ -251,7 +280,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: flex-end;
 
         div {
             height: 300px;
@@ -266,7 +295,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 96px 0;
+    padding: 32px 0;
+    min-height: 100vh;
 }
 
 .content {
@@ -305,10 +335,12 @@ h2 {
     font-family: acumin-pro-extra-condensed;
     font-size: 96px;
     line-height: 96px;
+    margin-bottom: 32px;
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 48px;
+    line-height: 52px;
 }
 
 h4 {
@@ -344,7 +376,16 @@ p {
         display: none;
     }
 
+    .nav-mobile {
+        display: flex;
+    }
+
     #Welcome .headshot {
         justify-content: center;
+    }
+
+    .App #links {
+        bottom: 8px;
+        right: 8px;
     }
 }
