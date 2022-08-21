@@ -92,13 +92,19 @@
 
 #Welcome {
     color: white;
+
+    a {
+        font-size: 24px;
+        font-weight: 500;
+    }
 }
 
 #Generative {
+    background-color: #cf5033;
     .generative-gallery {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
 
         div {
@@ -108,6 +114,7 @@
         }
 
         a {
+            color: black;
             font-size: 32px;
         }
     }
@@ -119,7 +126,7 @@
     .design-gallery {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
 
         div {

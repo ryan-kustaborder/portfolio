@@ -21,11 +21,14 @@ export default function App() {
                             <h3>I am Ryan Kustaborder</h3>
                             <p>
                                 and I am a front-end developer who emphasizes
-                                <span className="underline">accessibility</span>
-                                and
-                                <span className="underline">
-                                    usability.
-                                </span>{" "}
+                                <a
+                                    href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="underline"
+                                >
+                                    accessibility and usability.
+                                </a>
                                 Morbi posuere purus dolor, nec cursus lacus
                                 semper nec. Etiam venenatis elit sem. Praesent
                                 facilisis lectus sed feugiat venenatis.
@@ -44,8 +47,20 @@ export default function App() {
                             desc="This is a project I did for ART 347 at Cleveland State University"
                             href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
                         />
-                        <ProjectLink />
-                        <ProjectLink />
+                        <ProjectLink
+                            src={ACC_MAT}
+                            title="Accessibility Matters."
+                            alt="Screenshot of my Accessibility Matters Project"
+                            desc="This is a project I did for ART 347 at Cleveland State University"
+                            href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
+                        />
+                        <ProjectLink
+                            src={ACC_MAT}
+                            title="Accessibility Matters."
+                            alt="Screenshot of my Accessibility Matters Project"
+                            desc="This is a project I did for ART 347 at Cleveland State University"
+                            href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
+                        />
                     </div>
                 </div>
 
@@ -68,7 +83,7 @@ export default function App() {
                         </p>
                         <div className="generative-gallery span--4">
                             <div></div>
-                            <a href="#">Visit the Gallery</a>
+                            <a href="./">Visit the Gallery</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +107,7 @@ export default function App() {
                         </p>
                         <div className="design-gallery span--4">
                             <div></div>
-                            <a href="#">Visit the Gallery</a>
+                            <a href="./">Visit the Gallery</a>
                         </div>
                     </div>
                 </div>
