@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: acumin-pro, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+    min-height: 100vh;
+    background-color: #4698cf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.span--1 {
+    grid-column: span 1;
+}
+.span--2 {
+    grid-column: span 2;
+}
+.span--3 {
+    grid-column: span 3;
+}
+.span--4 {
+    grid-column: span 4;
+}
+.span--5 {
+    grid-column: span 5;
+}
+.span--6 {
+    grid-column: span 6;
+}
+.span--7 {
+    grid-column: span 7;
+}
+.span--8 {
+    grid-column: span 8;
+}
+.span--9 {
+    grid-column: span 9;
+}
+
+#Projects {
+    background: white;
+    color: black;
+}
+
+#Welcome {
+    color: white;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px 0;
+}
+
+.underline {
+    border-bottom: 2px dashed white;
+    margin: 0px 8px;
+}
+
+.content {
+    width: 80vw;
+}
+
+.project {
+    background-color: red;
+    height: 200px;
+}
+
+.desc {
+    border-left: 2px dashed black;
+    padding-left: 16px;
+}
+
+h1 {
+    font-size: 128px;
+    font-family: acumin-pro-extra-condensed;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+h1:after {
+    content: "";
+    margin-top: -22px;
+    margin-left: -20%;
+    width: 60vw;
+    border-top: 16px dashed white;
+}
+
+h2 {
+    font-family: acumin-pro-extra-condensed;
+    font-size: 96px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 24px;
+}
