@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-nav {
+.nav-desktop {
     position: fixed;
     right: 0;
     width: 10vw;
@@ -25,6 +25,67 @@ nav {
         color: black;
         font-family: "acumin-pro-extra-condensed";
         font-size: 22px;
+    }
+}
+
+.nav-mobile {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+
+    svg {
+        fill: white;
+
+        rect {
+            transition: transform 0.5s, scale 0.5s;
+            transform-origin: center;
+        }
+
+        &.x {
+            .top {
+                transform: rotate(45deg) translate(0px, 96px);
+                transform-origin: center;
+            }
+
+            .mid {
+                scale: 0;
+            }
+
+            .bot {
+                transform: rotate(-45deg) translate(0px, -96px);
+                transform-origin: center;
+            }
+        }
+    }
+
+    .nav-mobile-links {
+        position: fixed;
+        right: 8px;
+        top: 72px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-right: 4px dashed black;
+        padding: 8px;
+
+        a {
+            background: black;
+            padding: 0 8px;
+            margin-bottom: 4px;
+            color: white;
+            font-family: "acumin-pro-extra-condensed";
+            font-size: 32px;
+        }
     }
 }
 
@@ -226,23 +287,24 @@ a:hover {
 h1 {
     font-size: 128px;
     font-family: acumin-pro-extra-condensed;
-    font-weight: 900;
+    font-weight: 700;
     display: flex;
     flex-direction: column;
-}
 
-h1:after {
-    content: "";
-    margin-top: -22px;
-    margin-left: -20%;
-    margin-bottom: 48px;
-    width: 40vw;
-    border-top: 16px dashed white;
+    &:after {
+        content: "";
+        margin-top: -22px;
+        margin-left: -20%;
+        margin-bottom: 48px;
+        width: 40vw;
+        border-top: 16px dashed white;
+    }
 }
 
 h2 {
     font-family: acumin-pro-extra-condensed;
     font-size: 96px;
+    line-height: 96px;
 }
 
 h3 {
@@ -260,7 +322,29 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-    .span--3 {
+    h1 {
+        font-size: 96px;
+
+        &:after {
+            width: 70vw;
+        }
+    }
+
+    .span--3,
+    .span--4,
+    .span--5 {
         grid-column: span 9;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    #Welcome .headshot {
+        justify-content: center;
     }
 }

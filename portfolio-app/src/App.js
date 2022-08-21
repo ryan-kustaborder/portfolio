@@ -6,6 +6,7 @@ import HEADSHOT from "./images/Headshot.png";
 import GithubLogo from "./images/GithubLogo";
 import EmailIcon from "./images/EmailIcon";
 import LinkedInIcon from "./images/LinkedInIcon";
+import MobileNav from "./MobileNav";
 
 export default function App() {
     return (
@@ -16,13 +17,15 @@ export default function App() {
                 <LinkedInIcon />
             </div>
 
-            <nav>
+            <nav className="nav-desktop">
                 <a href="#Welcome">Welcome</a>
                 <a href="#Projects">Projects</a>
                 <a href="#Generative">Generative Art</a>
                 <a href="#Design">Graphic Design</a>
                 <a href="#Design">Gallery</a>
             </nav>
+
+            <MobileNav />
 
             <div id="Welcome" className="section">
                 <div className="content grid">
