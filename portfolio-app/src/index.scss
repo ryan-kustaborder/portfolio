@@ -17,7 +17,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-column-gap: 16px;
+    grid-column-gap: 32px;
     grid-row-gap: 16px;
 }
 
@@ -50,12 +50,76 @@
 }
 
 #Projects {
-    background: white;
+    background-color: white;
     color: black;
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid black;
+        background-color: white;
+    }
+
+    .project-description {
+        margin-top: 16px;
+        border-left: 2px dashed black;
+        padding-left: 16px;
+
+        p {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #cf5033;
+        }
+    }
 }
 
 #Welcome {
     color: white;
+}
+
+#Generative {
+    .generative-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+
+        div {
+            height: 300px;
+            width: 100%;
+            background-color: white;
+        }
+
+        a {
+            font-size: 32px;
+        }
+    }
+}
+
+#Design {
+    background-color: white;
+
+    .design-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+
+        div {
+            height: 300px;
+            width: 100%;
+            background-color: #cf5033;
+        }
+
+        a {
+            font-size: 32px;
+            color: #cf5033;
+        }
+    }
 }
 
 .section {
@@ -75,32 +139,10 @@
     width: 80vw;
 }
 
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border: 2px solid black;
-}
-
-.project-description {
-    margin-top: 16px;
-    border-left: 2px dashed black;
-    padding-left: 16px;
-
-    p {
-        font-size: 18px;
-        margin-bottom: 16px;
-    }
-
-    a {
-        font-size: 18px;
-        font-weight: bold;
-        color: #cf5033;
-    }
-}
-
 a {
     text-decoration-style: dashed;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 a:hover {
