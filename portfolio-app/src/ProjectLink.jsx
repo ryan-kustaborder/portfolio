@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class ProjectLink extends Component {
     render() {
         return (
-            <div className="span--3">
+            <div className={"span--3 " + this.props.class}>
                 <img
                     src={this.props.src}
                     alt={this.props.alt}

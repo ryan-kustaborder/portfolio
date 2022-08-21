@@ -6,6 +6,28 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+nav {
+    position: fixed;
+    right: 0;
+    width: 10vw;
+    height: 50%;
+    top: 25%;
+    margin-right: 8px;
+    border-right: 2px dashed black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    a {
+        margin-right: 8px;
+        text-align: end;
+        color: black;
+        font-family: "acumin-pro-extra-condensed";
+        font-size: 22px;
+    }
+}
+
 .App {
     min-height: 100vh;
     background-color: #4698cf;
@@ -27,39 +49,42 @@
     }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-column-gap: 32px;
-    grid-row-gap: 16px;
-}
+// Grids
+* {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-column-gap: 32px;
+        grid-row-gap: 16px;
+    }
 
-.span--1 {
-    grid-column: span 1;
-}
-.span--2 {
-    grid-column: span 2;
-}
-.span--3 {
-    grid-column: span 3;
-}
-.span--4 {
-    grid-column: span 4;
-}
-.span--5 {
-    grid-column: span 5;
-}
-.span--6 {
-    grid-column: span 6;
-}
-.span--7 {
-    grid-column: span 7;
-}
-.span--8 {
-    grid-column: span 8;
-}
-.span--9 {
-    grid-column: span 9;
+    .span--1 {
+        grid-column: span 1;
+    }
+    .span--2 {
+        grid-column: span 2;
+    }
+    .span--3 {
+        grid-column: span 3;
+    }
+    .span--4 {
+        grid-column: span 4;
+    }
+    .span--5 {
+        grid-column: span 5;
+    }
+    .span--6 {
+        grid-column: span 6;
+    }
+    .span--7 {
+        grid-column: span 7;
+    }
+    .span--8 {
+        grid-column: span 8;
+    }
+    .span--9 {
+        grid-column: span 9;
+    }
 }
 
 #Projects {
@@ -99,14 +124,36 @@
         margin: 0px 8px;
         color: white;
     }
+
+    .headshot {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            width: 80%;
+            border-radius: 50%;
+            border: 5px white solid;
+        }
+    }
 }
 
 #Generative {
     background-color: #cf5033;
 
-    p {
+    .section-description {
         border-left: 2px dashed black;
         padding-left: 16px;
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: black;
+            font-size: 32px;
+        }
     }
 
     .generative-gallery {
@@ -120,22 +167,25 @@
             width: 100%;
             background-color: white;
         }
-
-        a {
-            color: black;
-            font-size: 32px;
-        }
     }
 }
 
 #Design {
     background-color: white;
 
-    p {
+    .section-description {
         border-left: 2px dashed black;
         padding-left: 16px;
-    }
 
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #cf5033;
+            font-size: 32px;
+        }
+    }
     .design-gallery {
         display: flex;
         flex-direction: column;
@@ -146,11 +196,6 @@
             height: 300px;
             width: 100%;
             background-color: #cf5033;
-        }
-
-        a {
-            font-size: 32px;
-            color: #cf5033;
         }
     }
 }
@@ -164,6 +209,7 @@
 }
 
 .content {
+    margin-left: -10%;
     width: 80vw;
 }
 
