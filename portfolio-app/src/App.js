@@ -1,3 +1,7 @@
+import ProjectLink from "./ProjectLink";
+
+import ACC_MAT from "./images/accMat.png";
+
 export default function App() {
     return (
         <div className="App noisy">
@@ -18,24 +22,13 @@ export default function App() {
             <div id="Projects" className="section">
                 <div className="content grid">
                     <h2 className="span--9">Projects</h2>
-                    <div className="span--3 project"></div>
-                    <div className="span--3 project"></div>
-                    <div className="span--3 project"></div>
-                    <div className="span--3 desc">
-                        <h4>Accessibility Matters</h4>
-                        This is a project I did for ART 347 at Cleveland State
-                        University
-                    </div>
-                    <div className="span--3 desc">
-                        <h4>Accessibility Matters</h4>
-                        This is a project I did for ART 347 at Cleveland State
-                        University
-                    </div>
-                    <div className="span--3 desc">
-                        <h4>Accessibility Matters</h4>
-                        This is a project I did for ART 347 at Cleveland State
-                        University
-                    </div>
+                    <ProjectLink
+                        src={ACC_MAT}
+                        title="Accessibility Matters"
+                        desc="This is a project I did for ART 347 at Cleveland State University"
+                    />
+                    <ProjectLink />
+                    <ProjectLink />
                 </div>
             </div>
         </div>

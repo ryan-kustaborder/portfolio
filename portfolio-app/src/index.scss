@@ -75,14 +75,36 @@
     width: 80vw;
 }
 
-.project {
-    background-color: red;
+.project-image {
+    width: 100%;
     height: 200px;
+    object-fit: cover;
+    border: 2px solid black;
 }
 
-.desc {
+.project-description {
+    margin-top: 16px;
     border-left: 2px dashed black;
     padding-left: 16px;
+
+    p {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #cf5033;
+    }
+}
+
+a {
+    text-decoration-style: dashed;
+}
+
+a:hover {
+    text-decoration-style: solid;
 }
 
 h1 {
@@ -110,6 +132,18 @@ h3 {
     font-size: 32px;
 }
 
+h4 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+
 p {
     font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .span--3 {
+        grid-column: span 9;
+    }
 }
