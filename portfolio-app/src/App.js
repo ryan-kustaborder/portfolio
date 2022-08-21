@@ -16,23 +16,26 @@ export default function App() {
                 </div>
                 <div id="Welcome" className="section">
                     <div className="content grid">
-                        <h1 className="span--9">Welcome</h1>
                         <div className="span--5">
-                            <h3>I am Ryan Kustaborder</h3>
-                            <p>
-                                and I am a front-end developer who emphasizes
-                                <a
-                                    href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="underline"
-                                >
-                                    accessibility and usability.
-                                </a>
-                                Morbi posuere purus dolor, nec cursus lacus
-                                semper nec. Etiam venenatis elit sem. Praesent
-                                facilisis lectus sed feugiat venenatis.
-                            </p>
+                            <h1>Welcome</h1>
+                            <div>
+                                <h3>I am Ryan Kustaborder</h3>
+                                <p>
+                                    and I am a front-end developer who
+                                    emphasizes
+                                    <a
+                                        href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        accessibility and usability.
+                                    </a>
+                                    Morbi posuere purus dolor, nec cursus lacus
+                                    semper nec. Etiam venenatis elit sem.
+                                    Praesent facilisis lectus sed feugiat
+                                    venenatis.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

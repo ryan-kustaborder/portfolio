@@ -96,11 +96,19 @@
     a {
         font-size: 24px;
         font-weight: 500;
+        margin: 0px 8px;
+        color: white;
     }
 }
 
 #Generative {
     background-color: #cf5033;
+
+    p {
+        border-left: 2px dashed black;
+        padding-left: 16px;
+    }
+
     .generative-gallery {
         display: flex;
         flex-direction: column;
@@ -122,6 +130,11 @@
 
 #Design {
     background-color: white;
+
+    p {
+        border-left: 2px dashed black;
+        padding-left: 16px;
+    }
 
     .design-gallery {
         display: flex;
@@ -150,11 +163,6 @@
     padding: 96px 0;
 }
 
-.underline {
-    border-bottom: 2px dashed white;
-    margin: 0px 8px;
-}
-
 .content {
     width: 80vw;
 }
@@ -181,7 +189,8 @@ h1:after {
     content: "";
     margin-top: -22px;
     margin-left: -20%;
-    width: 60vw;
+    margin-bottom: 48px;
+    width: 40vw;
     border-top: 16px dashed white;
 }
 
