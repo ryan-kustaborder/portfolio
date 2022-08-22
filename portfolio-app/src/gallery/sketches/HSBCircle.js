@@ -1,4 +1,7 @@
-const title = "HSB_Circle.p5";
+const title = "HSB Circle";
+
+const desc = "This is a simple project for testing P5js in the site";
+
 const size = { width: 400, height: 400 };
 
 const initState = {
@@ -19,8 +22,6 @@ function getInputs(win) {
 
     return (
         <div className="Input-Container">
-            <p>Controls</p>
-
             <div>
                 <input
                     type="range"
@@ -28,26 +29,18 @@ function getInputs(win) {
                     max="255"
                     onChange={win.onSaturationChange}
                 />
-                {/*
-        <Slider
-          label={"Saturation:"}
-          bounds={{ min: 0, max: 255, step: 1 }}
-          value={win.state.saturation}
-          onChange={win.onSaturationChange}
-        />
-        <Slider
-          label={"Brightness:"}
-          bounds={{ min: 0, max: 255, step: 1 }}
-          value={win.state.brightness}
-          onChange={win.onBrightnessChange}
-        />
-        <Slider
-          label={"Segments:"}
-          bounds={{ min: 6, max: 60, step: 6 }}
-          value={win.state.segments}
-          onChange={win.onSegmentsChange}
-        />
-        */}
+                <input
+                    type="range"
+                    min="0"
+                    max="255"
+                    onChange={win.onBrightnessChange}
+                />
+                <input
+                    type="range"
+                    min="6"
+                    max="60"
+                    onChange={win.onSegmentsChange}
+                />
             </div>
         </div>
     );
@@ -63,15 +56,10 @@ function sketch(_p5) {
     };
 
     _p5.draw = function () {
-        //console.log(_p5.props);
         const saturation = _p5.map(_p5.props.saturation, 0, 255, 0, _p5.width);
-        //const brightness = _p5.map(_p5.props.brightness, 0, 255, 0, _p5.width);
+        const brightness = _p5.map(_p5.props.brightness, 0, 255, 0, _p5.width);
 
-        //const saturation = 100;
-        const brightness = 100;
-
-        //_p5.step = 360 / _p5.props.segments;
-        _p5.step = 40;
+        _p5.step = 360 / _p5.props.segments;
 
         _p5.background(0);
         _p5.noStroke();
@@ -101,6 +89,7 @@ function sketch(_p5) {
 const HSBCircle = {
     sketch: sketch,
     title: title,
+    desc: desc,
     size: size,
     initState: initState,
     getInputs: getInputs,

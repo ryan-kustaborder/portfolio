@@ -3,7 +3,8 @@ import EmailIcon from "../images/EmailIcon";
 import LinkedInIcon from "../images/LinkedInIcon";
 import { Component } from "react";
 import DisplayWindow from "./DisplayWindow";
-import Sketch from "./Sketch";
+
+import HSBCircle from "./sketches/HSBCircle";
 
 import Lukova1 from "./lukova/lukova1.png";
 import Lukova2 from "./lukova/lukova2.png";
@@ -16,32 +17,41 @@ export default class Gallery extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { show: false, images: [], alts: [] };
+        this.state = { images: [], alts: [] };
     }
 
-    onSelect(images, alts) {
-        this.setState({ show: true, images: images, alts: alts });
+    selectSketch(sketch) {
+        this.setState({
+            current: (
+                <SketchDisplayWindow
+                    sketch={sketch}
+                    onClose={this.onClose.bind(this)}
+                />
+            ),
+        });
+    }
+
+    selectImage(images, alts) {
+        this.setState({
+            current: (
+                <DisplayWindow
+                    onClose={this.onClose.bind(this)}
+                    images={images}
+                    alts={alts}
+                />
+            ),
+        });
     }
 
     onClose() {
-        this.setState({ show: false });
+        this.setState({ current: null });
     }
 
     render() {
         let display;
 
-        /*if (this.state.show) {
-            display = (
-                <DisplayWindow
-                    onSelect={this.onSelect.bind(this)}
-                    onClose={this.onClose.bind(this)}
-                    images={this.state.images}
-                    alts={this.state.alts}
-                />
-            );
-        }*/
-        if (this.state.show) {
-            display = <SketchDisplayWindow onClose={this.onClose.bind(this)} />;
+        if (this.state.current) {
+            display = this.state.current;
         }
 
         return (
@@ -69,27 +79,10 @@ export default class Gallery extends Component {
                         <h2 className="span--6">Generative Art</h2>
                         <div
                             className="preview span--1"
-                            onClick={() =>
-                                this.onSelect(
-                                    [
-                                        Lukova1,
-                                        Lukova2,
-                                        Lukova3,
-                                        Lukova4,
-                                        Lukova5,
-                                    ],
-                                    [
-                                        "Front Cover",
-                                        "Spread 1",
-                                        "Spread 2",
-                                        "Spread 3",
-                                        "Back Cover",
-                                    ]
-                                )
-                            }
+                            onClick={() => this.selectSketch(HSBCircle)}
                         >
                             <img src={Lukova1} alt="Luba Lukova"></img>
-                            <h4>Luba Lukova Booklet</h4>
+                            <h4>HSB Circle</h4>
                         </div>
                     </div>
                 </div>
@@ -99,7 +92,7 @@ export default class Gallery extends Component {
                         <div
                             className="preview span--1"
                             onClick={() =>
-                                this.onSelect(
+                                this.selectImage(
                                     [
                                         Lukova1,
                                         Lukova2,

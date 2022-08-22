@@ -1,32 +1,29 @@
 import React, { Component } from "react";
 import p5 from "p5";
 
-import HSBCircle from "./sketches/HSBCircle";
-
 export default class SketchDisplayWindow extends Component {
     constructor(props) {
         super(props);
 
-        this.state = HSBCircle.initState;
+        this.state = this.props.sketch.initState;
 
         this.ref = React.createRef();
     }
 
     onSetAppState = (newState, cb) => {
-        console.log("onSetApp");
         this.setState(newState, cb);
     };
 
     componentDidMount() {
-        if (!this.myP5) {
-            this.myP5 = new p5(HSBCircle.sketch, this.ref.current);
-            this.myP5.props = this.state;
-            this.myP5.onSetAppState = this.onSetAppState.bind(this);
+        if (!this.canvas) {
+            this.canvas = new p5(this.props.sketch.sketch, this.ref.current);
+            this.canvas.props = this.state;
+            this.canvas.onSetAppState = this.onSetAppState.bind(this);
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        this.myP5.props = this.state;
+    shouldComponentUpdate() {
+        this.canvas.props = this.state;
         return false;
     }
 
@@ -39,16 +36,11 @@ export default class SketchDisplayWindow extends Component {
                     </div>
                     <div className="about">
                         <div>
-                            <h2>Title</h2>
-                            <p>
-                                Aliquam eget elit sagittis, dapibus risus ut,
-                                imperdiet neque. Ut mattis justo et metus
-                                vehicula viverra. Fusce bibendum ultricies
-                                ligula iaculis facilisis.
-                            </p>
+                            <h2>{this.props.sketch.title}</h2>
+                            <p>{this.props.sketch.desc}</p>
                             <details>
                                 <summary>Controls</summary>
-                                {HSBCircle.getInputs(this)}
+                                {this.props.sketch.getInputs(this)}
                             </details>
                         </div>
                     </div>
