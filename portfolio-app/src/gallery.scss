@@ -131,6 +131,12 @@
     }
 }
 
+.sketchDisplay {
+    .image {
+        height: 95%;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     #GenerativeGallery,
     #DesignGallery,
