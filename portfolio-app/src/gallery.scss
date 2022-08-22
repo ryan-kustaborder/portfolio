@@ -131,9 +131,17 @@
     }
 }
 
+#Display.sketchDisplay > div .image {
+    height: 95%;
+}
+
 .sketchDisplay {
     .image {
         height: 95%;
+
+        #canvas-container {
+            height: 100%;
+        }
     }
 
     .description {

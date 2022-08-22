@@ -20,8 +20,7 @@ export default class SketchDisplayWindow extends Component {
 
             this.canvas.props = this.state;
             this.canvas.props.width = this.ref.current.offsetWidth;
-            this.canvas.props.height = this.ref.current.height;
-            console.log(this.ref.current.offsetHeight);
+            this.canvas.props.height = this.ref.current.offsetHeight;
 
             this.canvas.onSetAppState = this.onSetAppState.bind(this);
         }
@@ -39,7 +38,7 @@ export default class SketchDisplayWindow extends Component {
             <div id="Display" className="sketchDisplay">
                 <div>
                     <div className="image">
-                        <div ref={this.ref}></div>
+                        <div id="canvas-container" ref={this.ref}></div>
                     </div>
                     <div className="about">
                         <div>
