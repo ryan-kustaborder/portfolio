@@ -135,6 +135,19 @@
     .image {
         height: 95%;
     }
+
+    .description {
+        margin-bottom: 16px;
+    }
+
+    .sketch-controls {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+input[type="range"] {
+    width: 80%;
 }
 
 @media only screen and (max-width: 600px) {

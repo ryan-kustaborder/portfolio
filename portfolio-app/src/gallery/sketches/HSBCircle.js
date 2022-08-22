@@ -5,7 +5,7 @@ const desc = "This is a simple project for testing P5js in the site";
 const size = { width: 400, height: 400 };
 
 const initState = {
-    saturation: 100,
+    saturation: 255,
     brightness: 255,
     segments: 24,
 };
@@ -21,28 +21,34 @@ function getInputs(win) {
         win.setState({ segments: +event.target.value });
 
     return (
-        <div className="Input-Container">
-            <div>
-                <input
-                    type="range"
-                    min="0"
-                    max="255"
-                    onChange={win.onSaturationChange}
-                />
-                <input
-                    type="range"
-                    min="0"
-                    max="255"
-                    onChange={win.onBrightnessChange}
-                />
-                <input
-                    type="range"
-                    min="6"
-                    max="60"
-                    onChange={win.onSegmentsChange}
-                />
-            </div>
-        </div>
+        <>
+            <label htmlFor="saturation">Saturation: </label>
+            <input
+                id="saturation"
+                type="range"
+                min="0"
+                max="255"
+                onChange={win.onSaturationChange}
+            />
+
+            <label htmlFor="brightness">Brightness: </label>
+            <input
+                id="brightness"
+                type="range"
+                min="0"
+                max="255"
+                onChange={win.onBrightnessChange}
+            />
+
+            <label htmlFor="segments">Segments: </label>
+            <input
+                id="segments"
+                type="range"
+                min="6"
+                max="60"
+                onChange={win.onSegmentsChange}
+            />
+        </>
     );
 }
 
@@ -56,6 +62,8 @@ function sketch(_p5) {
     };
 
     _p5.draw = function () {
+        _p5.resizeCanvas(_p5.props.width, _p5.props.height);
+
         const saturation = _p5.map(_p5.props.saturation, 0, 255, 0, _p5.width);
         const brightness = _p5.map(_p5.props.brightness, 0, 255, 0, _p5.width);
 
