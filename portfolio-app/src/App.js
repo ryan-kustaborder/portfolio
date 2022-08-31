@@ -1,4 +1,5 @@
 import ProjectLink from "./ProjectLink";
+import { HashLink } from "react-router-hash-link";
 
 import ACC_MAT from "./images/accMat.png";
 import CHESS from "./images/chess.png";
@@ -21,11 +22,21 @@ export default function App() {
             </div>
 
             <nav className="nav-desktop">
-                <a href="#Welcome">Welcome</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Generative">Generative Art</a>
-                <a href="#Design">Graphic Design</a>
-                <a href="#/Gallery">Gallery</a>
+                <HashLink smooth to="/#Welcome">
+                    Welcome
+                </HashLink>
+                <HashLink smooth to="/#Projects">
+                    Projects
+                </HashLink>
+                <HashLink smooth to="/#Generative">
+                    Generative Art
+                </HashLink>
+                <HashLink smooth to="/#Design">
+                    Graphic Design
+                </HashLink>
+                <HashLink to="/Gallery">
+                    Gallery
+                </HashLink>
             </nav>
 
             <MobileNav />
@@ -90,7 +101,7 @@ export default function App() {
                                 Generative Art is a shining example of this
                                 phenomenon.
                             </p>
-                            <a href="./">Visit the Gallery</a>
+                            <a href="/#/Gallery">Visit the Gallery</a>
                         </div>
                     </div>
                     <div className="generative-gallery span--4">
@@ -111,7 +122,7 @@ export default function App() {
                                 principles throughout all of my work, no matter
                                 the medium.
                             </p>
-                            <a href="./">Visit the Gallery</a>
+                            <a href="/#/Gallery">Visit the Gallery</a>
                         </div>
                     </div>
                     <div className="design-gallery span--4">

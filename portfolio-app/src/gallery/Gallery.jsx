@@ -5,6 +5,7 @@ import { Component } from "react";
 import DisplayWindow from "./DisplayWindow";
 
 import HSBCircle from "./sketches/HSBCircle";
+import Reaction from "./sketches/Reaction";
 
 import Lukova1 from "./lukova/lukova1.png";
 import Lukova2 from "./lukova/lukova2.png";
@@ -83,6 +84,17 @@ export default class Gallery extends Component {
                         >
                             <img src={Lukova1} alt="Luba Lukova"></img>
                             <h4>HSB Circle</h4>
+                        </div>
+
+                        <div
+                            className="preview span--1"
+                            onClick={() => this.selectSketch(Reaction)}
+                        >
+                            <img
+                                src={Reaction.thumbnail}
+                                alt="Luba Lukova"
+                            ></img>
+                            <h4>{Reaction.title}</h4>
                         </div>
                     </div>
                 </div>

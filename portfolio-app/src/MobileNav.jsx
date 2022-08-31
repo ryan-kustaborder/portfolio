@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default class MobileNav extends Component {
     constructor(props) {
@@ -28,11 +29,19 @@ export default class MobileNav extends Component {
             <nav className="nav-mobile" onClick={this.onToggle.bind(this)}>
                 {svg}
                 <div style={{ display: display }} className="nav-mobile-links">
-                    <a href="#Welcome">Welcome</a>
-                    <a href="#Projects">Projects</a>
-                    <a href="#Generative">Generative Art</a>
-                    <a href="#Design">Graphic Design</a>
-                    <a href="#Design">Gallery</a>
+                    <HashLink smooth to="/#Welcome">
+                        Welcome
+                    </HashLink>
+                    <HashLink smooth to="/#Projects">
+                        Projects
+                    </HashLink>
+                    <HashLink smooth to="/#Generative">
+                        Generative Art
+                    </HashLink>
+                    <HashLink smooth to="/#Design">
+                        Graphic Design
+                    </HashLink>
+                    <HashLink to="/Gallery">Gallery</HashLink>
                 </div>
             </nav>
         );
