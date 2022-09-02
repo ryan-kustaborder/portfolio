@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.db93dd04.css",
-    "main.js": "/portfolio/static/js/main.3b778fe3.js",
+    "main.css": "/portfolio/static/css/main.1d9413aa.css",
+    "main.js": "/portfolio/static/js/main.0ca02e29.js",
     "static/media/Headshot.png": "/portfolio/static/media/Headshot.83265a0532b9e1bc52e7.png",
+    "static/media/rodchenko.png": "/portfolio/static/media/rodchenko.861e5a26a22db29a1cf3.png",
     "static/media/lukova2.png": "/portfolio/static/media/lukova2.4dd2faa7f57cbe36f833.png",
+    "static/media/inferno1.png": "/portfolio/static/media/inferno1.a0537b60d6ea0422d50a.png",
+    "static/media/lukovaPDF.pdf": "/portfolio/static/media/lukovaPDF.dff9032d333a98c6a8a8.pdf",
+    "static/media/layoutPDF.pdf": "/portfolio/static/media/layoutPDF.fd451bfd455cf69fce19.pdf",
     "static/media/lukova4.png": "/portfolio/static/media/lukova4.bd8d1c546ad236eb78bd.png",
+    "static/media/layout5.png": "/portfolio/static/media/layout5.b2c9a40626b7bb048c58.png",
     "static/media/lukova3.png": "/portfolio/static/media/lukova3.da762269795102aabd01.png",
+    "static/media/layout3.png": "/portfolio/static/media/layout3.59fa86136fa3908480ac.png",
+    "static/media/layout4.png": "/portfolio/static/media/layout4.f0370a2857a0dedf886a.png",
     "static/media/lukova5.png": "/portfolio/static/media/lukova5.4542c4c023b7ef1f3449.png",
     "static/media/accMat.png": "/portfolio/static/media/accMat.1d2d9db2a6439c9cc95c.png",
-    "static/media/ReactionThumb.png": "/portfolio/static/media/ReactionThumb.ebc61f8cab3d1eebd618.png",
+    "static/media/layout2.png": "/portfolio/static/media/layout2.405cbccd8aeddb3bcb1e.png",
+    "static/media/ReactionThumb.png": "/portfolio/static/media/ReactionThumb.4e8e671172765cb58421.png",
+    "static/media/layout1.png": "/portfolio/static/media/layout1.c7bc1264ab8b7eddfff6.png",
+    "static/media/skyline.png": "/portfolio/static/media/skyline.dc6743dc6dcf3376024c.png",
     "static/media/resume.pdf": "/portfolio/static/media/resume.f240f2840c282b0450cb.pdf",
+    "static/media/inferno2.png": "/portfolio/static/media/inferno2.bbe05291536f69c172d0.png",
     "static/media/lukova1.png": "/portfolio/static/media/lukova1.2bf7b768e7ad7d37abc2.png",
     "static/media/chess.png": "/portfolio/static/media/chess.bd928405ec5807353fa0.png",
+    "static/media/HSBCircleThumb.png": "/portfolio/static/media/HSBCircleThumb.c3bf147717414f9ff7ab.png",
     "index.html": "/portfolio/index.html",
-    "main.db93dd04.css.map": "/portfolio/static/css/main.db93dd04.css.map",
-    "main.3b778fe3.js.map": "/portfolio/static/js/main.3b778fe3.js.map"
+    "main.1d9413aa.css.map": "/portfolio/static/css/main.1d9413aa.css.map",
+    "main.0ca02e29.js.map": "/portfolio/static/js/main.0ca02e29.js.map"
   },
   "entrypoints": [
-    "static/css/main.db93dd04.css",
-    "static/js/main.3b778fe3.js"
+    "static/css/main.1d9413aa.css",
+    "static/js/main.0ca02e29.js"
   ]
 }
