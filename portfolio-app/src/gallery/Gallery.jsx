@@ -7,16 +7,17 @@ import DisplayWindow from "./DisplayWindow";
 import HSBCircle from "./sketches/HSBCircle";
 import Reaction from "./sketches/Reaction";
 
-import Lukova1 from "./lukova/lukova1.png";
-import Lukova2 from "./lukova/lukova2.png";
-import Lukova3 from "./lukova/lukova3.png";
-import Lukova4 from "./lukova/lukova4.png";
-import Lukova5 from "./lukova/lukova5.png";
+import designs from "./design/galleryDesigns";
+
 import SketchDisplayWindow from "./SketchDisplayWindow";
 
 export default class Gallery extends Component {
     constructor(props) {
         super(props);
+
+        this.sketches = [HSBCircle, Reaction];
+
+        this.designs = designs;
 
         this.state = { images: [], alts: [] };
     }
@@ -32,10 +33,11 @@ export default class Gallery extends Component {
         });
     }
 
-    selectImage(images, alts) {
+    selectImage(images, alts, design) {
         this.setState({
             current: (
                 <DisplayWindow
+                    design={design}
                     onClose={this.onClose.bind(this)}
                     images={images}
                     alts={alts}
@@ -46,6 +48,36 @@ export default class Gallery extends Component {
 
     onClose() {
         this.setState({ current: null });
+    }
+
+    getSketches() {
+        return this.sketches.map((sketch) => {
+            return (
+                <div
+                    className="preview span--1"
+                    onClick={() => this.selectSketch(sketch)}
+                >
+                    <img src={sketch.thumbnail} alt={sketch.title}></img>
+                    <h4>{sketch.title}</h4>
+                </div>
+            );
+        });
+    }
+
+    getDesigns() {
+        return this.designs.map((design) => {
+            return (
+                <div
+                    className="preview span--1"
+                    onClick={() =>
+                        this.selectImage(design.images, design.alts, design)
+                    }
+                >
+                    <img src={design.images[0]} alt={design.title}></img>
+                    <h4>{design.title}</h4>
+                </div>
+            );
+        });
     }
 
     render() {
@@ -78,58 +110,14 @@ export default class Gallery extends Component {
                 <div id="GenerativeGallery" className="section noisy">
                     <div className="content grid">
                         <h2 className="span--6">Generative Art</h2>
-                        <div
-                            className="preview span--1"
-                            onClick={() => this.selectSketch(HSBCircle)}
-                        >
-                            <img src={Lukova1} alt="Luba Lukova"></img>
-                            <h4>HSB Circle</h4>
-                        </div>
 
-                        <div
-                            className="preview span--1"
-                            onClick={() => this.selectSketch(Reaction)}
-                        >
-                            <img
-                                src={Reaction.thumbnail}
-                                alt="Luba Lukova"
-                            ></img>
-                            <h4>{Reaction.title}</h4>
-                        </div>
+                        {this.getSketches()}
                     </div>
                 </div>
                 <div id="DesignGallery" className="section noisy">
                     <div className="content grid">
                         <h2 className="span--6">Graphic Design</h2>
-                        <div
-                            className="preview span--1"
-                            onClick={() =>
-                                this.selectImage(
-                                    [
-                                        Lukova1,
-                                        Lukova2,
-                                        Lukova3,
-                                        Lukova4,
-                                        Lukova5,
-                                    ],
-                                    [
-                                        "Front Cover",
-                                        "Spread 1",
-                                        "Spread 2",
-                                        "Spread 3",
-                                        "Back Cover",
-                                    ]
-                                )
-                            }
-                        >
-                            <img src={Lukova1} alt="Luba Lukova"></img>
-                            <h4>Luba Lukova Booklet</h4>
-                        </div>
-                    </div>
-                </div>
-                <div id="OtherGallery" className="section noisy">
-                    <div className="content grid">
-                        <h2 className="span--6">Other</h2>
+                        {this.getDesigns()}
                     </div>
                 </div>
             </div>

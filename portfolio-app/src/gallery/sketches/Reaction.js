@@ -17,7 +17,11 @@ let points = [
 
 let offset = 0;
 
-const initState = { speed: 1, color: { r: 215, g: 125, b: 45 }, size: 60 };
+const initState = {
+    speed: 1,
+    color: { hex: "#D7722D", r: 215, g: 125, b: 45 },
+    size: 60,
+};
 
 function getInputs(win) {
     win.onSpeedChange = (event) => {
@@ -42,7 +46,7 @@ function getInputs(win) {
     };
 
     win.onColorChange = (event) => {
-        console.log("change");
+        //console.log();
         let color = event.target.value;
 
         let hexR = color[1] + color[2];
@@ -53,7 +57,7 @@ function getInputs(win) {
         let decG = parseInt(hexG, 16);
         let decB = parseInt(hexB, 16);
 
-        win.setState({ color: { r: decR, g: decG, b: decB } });
+        win.setState({ color: { hex: color, r: decR, g: decG, b: decB } });
     };
 
     return (
@@ -86,7 +90,7 @@ function getInputs(win) {
             />
 
             <label htmlFor="color">Color: </label>
-            <input id="color" type="color" onChange={win.onColorChange} />
+            <input id="color" type="color" onInput={win.onColorChange} />
         </>
     );
 }
@@ -130,7 +134,7 @@ function sketch(_p5) {
             }
         }
 
-        if (offset >= _p5.props.size) {
+        if (offset + 3 >= _p5.props.size) {
             offset = 0;
         } else {
             offset += _p5.props.speed / 2;

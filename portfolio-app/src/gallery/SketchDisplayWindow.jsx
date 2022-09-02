@@ -52,7 +52,14 @@ export default class SketchDisplayWindow extends Component {
                             </details>
                         </div>
                     </div>
-                    <button onClick={this.props.onClose}>X</button>
+                    <button
+                        onClick={() => {
+                            this.props.onClose();
+                            this.canvas.noLoop();
+                        }}
+                    >
+                        X
+                    </button>
                 </div>
             </div>
         );

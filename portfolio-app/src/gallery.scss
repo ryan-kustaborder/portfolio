@@ -19,7 +19,7 @@
 
 .preview {
     img {
-        height: 100px;
+        aspect-ratio: 1/1;
         width: 100%;
         object-fit: cover;
         border: 2px dashed black;
@@ -100,13 +100,10 @@
             flex-direction: column;
             justify-content: space-between;
 
-            h2 {
-                margin-bottom: 8px;
-            }
-
             p {
                 border-left: 2px dashed black;
                 padding-left: 16px;
+                width: 85%;
             }
 
             a {

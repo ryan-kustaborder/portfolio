@@ -1,3 +1,5 @@
+import HSBCircleThumb from "./HSBCircleThumb.png";
+
 const title = "HSB Circle";
 
 const desc = "This is a simple project for testing P5js in the site";
@@ -98,6 +100,7 @@ const HSBCircle = {
     sketch: sketch,
     title: title,
     desc: desc,
+    thumbnail: HSBCircleThumb,
     size: size,
     initState: initState,
     getInputs: getInputs,

@@ -35,16 +35,15 @@ export default class DisplayWindow extends Component {
                     <div className="legend">{legendImages}</div>
                     <div className="about">
                         <div>
-                            <h2>Title</h2>
-                            <p>
-                                Aliquam eget elit sagittis, dapibus risus ut,
-                                imperdiet neque. Ut mattis justo et metus
-                                vehicula viverra. Fusce bibendum ultricies
-                                ligula iaculis facilisis.
-                            </p>
+                            <h3>{this.props.design.title}</h3>
+                            <p>{this.props.design.desc}</p>
                         </div>
-                        <a href="./" target="_blank" rel="noreferrer">
-                            View in full resolution
+                        <a
+                            href={this.props.design.external}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            View more
                         </a>
                     </div>
                     <button onClick={this.props.onClose}>X</button>
