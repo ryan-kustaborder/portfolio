@@ -34,9 +34,7 @@ export default function App() {
                 <HashLink smooth to="/#Design">
                     Graphic Design
                 </HashLink>
-                <HashLink to="/Gallery">
-                    Gallery
-                </HashLink>
+                <HashLink to="/Gallery">Gallery</HashLink>
             </nav>
 
             <MobileNav />
@@ -101,7 +99,7 @@ export default function App() {
                                 Generative Art is a shining example of this
                                 phenomenon.
                             </p>
-                            <a href="/#/Gallery">Visit the Gallery</a>
+                            <HashLink to="/Gallery">Visit the Gallery</HashLink>
                         </div>
                     </div>
                     <div className="generative-gallery span--4">
@@ -122,7 +120,7 @@ export default function App() {
                                 principles throughout all of my work, no matter
                                 the medium.
                             </p>
-                            <a href="/#/Gallery">Visit the Gallery</a>
+                            <HashLink to="/Gallery">Visit the Gallery</HashLink>
                         </div>
                     </div>
                     <div className="design-gallery span--4">
