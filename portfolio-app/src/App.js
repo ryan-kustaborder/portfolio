@@ -14,119 +14,97 @@ import MobileNav from "./MobileNav";
 
 export default function App() {
     return (
-        <div className="App noisy">
-            <div id="links">
-                <GithubLogo />
-                <EmailIcon />
-                <LinkedInIcon />
-            </div>
+        <div id="home">
+            <header>
+                <a>Ryan Kustaborder</a>
+                <div>
+                    <a>Projects</a>
+                    <a>Gallery</a>
+                    <a>Resume</a>
+                    <a>Contact</a>
+                </div>
+            </header>
 
-            <nav className="nav-desktop">
-                <HashLink smooth to="/#Welcome">
-                    Welcome
-                </HashLink>
-                <HashLink smooth to="/#Projects">
-                    Projects
-                </HashLink>
-                <HashLink smooth to="/#Generative">
-                    Generative Art
-                </HashLink>
-                <HashLink smooth to="/#Design">
-                    Graphic Design
-                </HashLink>
-                <HashLink to="/Gallery">Gallery</HashLink>
-            </nav>
+            <div id="content" className="grid">
+                <h1 className="span--5">Hello!</h1>
+                <p className="span--3">
+                    Lörem ipsum plutoid hyberavdrag, respektive spökgarn.
+                    Mansskatt. Sprejgodis gigavir. Tvåmetersregeln blingbling
+                    skimma. Rit-avdrag bjästa säg att Lasse Berghagen-vin
+                    cancelkultur. Koscheria klämspärr skynka Odellplatta.
+                    Ikeamonarki blixad helikoptermamma. Kameratelefon plutoid
+                    Maudeffekten. Terrorresa e-krona whataboutism. Twerka
+                    asymmetrisk krigföring.
+                </p>
+                <p className="span--3">
+                    Petabyte solflygteknik och guldomat spetspatient. Bonus
+                    malus receptmotionär. Trer kringmyndighet, klimatsäkra
+                    klustersmitta. Hackathon finanssmälta stadsspret.
+                    Antivaxxare kulturkofta medan läxrut bekymringssamtal Lasse
+                    Berghagen-vin. Det mörka nätet inbäddad journalist
+                    kulturkofta. Kroppsskanning annonsblockerare om tjejkött.
+                    Cringe ögonkramp kubtest, vobba ifall Lasse Berghagen-vin.
+                    Självkarantän blogga enveckasförsvar att arabisk vår. Skimma
+                    plånboksbröllop alternativa fakta robotjournalistik.
+                </p>
 
-            <MobileNav />
+                <h2 className="span--5">Featured Projects</h2>
 
-            <div id="Welcome" className="section">
-                <div className="content grid">
-                    <div className="span--5">
-                        <h1>Welcome</h1>
-                        <div className="section-description">
-                            <h3>I am Ryan Kustaborder</h3>
-                            <p>
-                                and I am a front-end developer who emphasizes
-                                <a
-                                    href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    accessibility and usability.
-                                </a>
-                            </p>
-                            <a href={RESUME} target="_blank" rel="noreferrer">
-                                View my Resume
-                            </a>
-                        </div>
+                {/* First Project*/}
+                <div className="image span--3"></div>
+                <div className="project-description span--2">
+                    <h3>Immersiv Mobilroman</h3>
+                    <p>
+                        Lörem ipsum nätbingo pappafeminist. Nätläkare e-krona
+                        hotelljournalist. Pansexuell morotsaktivism. Kulturkofta
+                        novellix. Mansplaining prehab. Fidget spinner virtuell
+                        våldtäkt. Plutoid kalkstenssångare.
+                    </p>
+                    <p>
+                        Rocka fett trekvartspudel. Plånboksbröllop krympflation.
+                        Gubbploga förnedringsrån attefallshus hedersvåld
+                        hundvissla. Mandatpingis terapeutisk kloning betalblogg.
+                        Kjolprotest cosplay och hemester förpackningsfri.
+                        Kreativ skolgång Gretaeffekten framtidsfullmakt. Följare
+                        cosplay krisväska blåkort. Du kan vara drabbad.
+                    </p>
+                    <div className="icon-link">
+                        <div className="icon"></div>
+                        <a>Check It Out</a>
                     </div>
-
-                    <div className="headshot span--4">
-                        <img alt="My Headshot" src={HEADSHOT}></img>
+                    <div className="icon-link">
+                        <div className="icon"></div>
+                        <a>Read More</a>
                     </div>
                 </div>
-            </div>
 
-            <div id="Projects" className="section noisy">
-                <div className="content grid">
-                    <h2 className="span--9">Projects</h2>
-                    <ProjectLink
-                        src={ACC_MAT}
-                        title="Accessibility Matters."
-                        alt="Screenshot of my Accessibility Matters Project"
-                        desc="This is a project I did for ART 347 at Cleveland State University"
-                        href="http://eecs.csuohio.edu/~rykustab/project1/index.html"
-                    />
-                    <ProjectLink
-                        src={CHESS}
-                        title="Chess Algorithm"
-                        alt="Screenshot of my Chess Project"
-                        desc="I developed an in-browser chess application that included a basic computer opponent based on the minimax algorithm."
-                        href="https://ryan-kustaborder.github.io/cis434s22g5/"
-                    />
-                </div>
-            </div>
-
-            <div id="Generative" className="section noisy">
-                <div className="content grid">
-                    <div className="span--5">
-                        <h2>Generative Art</h2>
-                        <div className="section-description">
-                            <p>
-                                The ability to create complex and interesting
-                                systems and designs from simple logic is
-                                something that has always fascinated me, and
-                                Generative Art is a shining example of this
-                                phenomenon.
-                            </p>
-                            <HashLink to="/Gallery">Visit the Gallery</HashLink>
-                        </div>
+                {/* First Project*/}
+                <div className="project-description span--2">
+                    <h3>Immersiv Mobilroman</h3>
+                    <p>
+                        Lörem ipsum nätbingo pappafeminist. Nätläkare e-krona
+                        hotelljournalist. Pansexuell morotsaktivism. Kulturkofta
+                        novellix. Mansplaining prehab. Fidget spinner virtuell
+                        våldtäkt. Plutoid kalkstenssångare.
+                    </p>
+                    <p>
+                        Rocka fett trekvartspudel. Plånboksbröllop krympflation.
+                        Gubbploga förnedringsrån attefallshus hedersvåld
+                        hundvissla. Mandatpingis terapeutisk kloning betalblogg.
+                        Kjolprotest cosplay och hemester förpackningsfri.
+                        Kreativ skolgång Gretaeffekten framtidsfullmakt. Följare
+                        cosplay krisväska blåkort. Du kan vara drabbad.
+                    </p>
+                    <div className="icon-link">
+                        <div className="icon"></div>
+                        <a>Check It Out</a>
                     </div>
-                    <div className="generative-gallery span--4">
-                        <div></div>
+                    <div className="icon-link">
+                        <div className="icon"></div>
+                        <a>Read More</a>
                     </div>
                 </div>
-            </div>
-
-            <div id="Design" className="section noisy">
-                <div className="content grid">
-                    <div className="span--5">
-                        <h2 className="span--9">Graphic Design</h2>
-                        <div className="section-description">
-                            <p className="span--5">
-                                I am also a graphic designer who was
-                                particularly influenced by the Swiss
-                                International Style. I try to carry these design
-                                principles throughout all of my work, no matter
-                                the medium.
-                            </p>
-                            <HashLink to="/Gallery">Visit the Gallery</HashLink>
-                        </div>
-                    </div>
-                    <div className="design-gallery span--4">
-                        <div></div>
-                    </div>
-                </div>
+                <div className="image span--3"></div>
             </div>
         </div>
     );
