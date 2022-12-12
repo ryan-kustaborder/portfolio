@@ -3,22 +3,61 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "", "Helvetica Neue", sans-serif;
+    font-family: sans-serif;
 }
 
-#home {
+#home,
+#resume,
+#gallery,
+#projects {
     padding-bottom: 256px;
+    background-color: lightgray;
 }
 
-.image {
-    height: 350px;
-    background-color: gray;
+#content {
+    background-color: white;
+    padding: 0px 32px 32px 32px;
+    margin: 32px 128px;
+}
+
+#gallery > #content {
+    img {
+        max-height: none;
+    }
+}
+
+img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border: 1px solid black;
+
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .icon {
     height: 16px;
     width: 16px;
     background-color: gray;
+}
+
+.feather-link {
+    width: 32px;
+    height: 32px;
+    background: black;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    & > a > svg {
+        color: white;
+    }
+}
+
+.right-align {
+    text-align: right;
 }
 
 // Grids
@@ -56,6 +95,24 @@ h1 {
 h2 {
     font-size: 64px;
     font-weight: 900;
+    line-height: 64px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    margin-bottom: 32px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+a {
+    color: black;
+}
+
+li {
+    margin-left: 24px;
 }
 
 header {
@@ -73,6 +130,7 @@ header {
         font-weight: 900;
         font-size: 24px;
         margin-left: 16px;
+        text-decoration: none;
     }
 
     & > div {
@@ -82,14 +140,137 @@ header {
             font-size: 20px;
             font-weight: 300;
             margin-left: 32px;
+            text-decoration: none;
+        }
+    }
+
+    & > .external-links {
+        display: flex;
+        position: absolute;
+        right: 16px;
+
+        & > div {
+            margin-left: 8px;
+        }
+    }
+
+    & > .mobile-links {
+        position: absolute;
+        right: 0;
+        display: none;
+
+        & > button,
+        & > button:active {
+            border: none;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+        }
+
+        & > .links {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            & > a {
+                margin: 8px;
+            }
+
+            & > .external {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &:hover > .links {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
 
 .icon-link {
     display: flex;
+    margin-top: 16px;
+    align-items: center;
 
     a {
         margin-left: 8px;
+    }
+}
+
+#resume {
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    #content {
+        & > div,
+        & > p {
+            margin-top: 32px;
+        }
+
+        & > p {
+            color: gray;
+        }
+
+        & > div:nth-child(6),
+        & > div:nth-child(3),
+        & > p:nth-child(4),
+        & > p:nth-child(7) {
+            margin-top: 0;
+        }
+    }
+}
+
+#home {
+    #content > p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        padding: 16px;
+        margin: 16px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        & > a {
+            font-size: 16px;
+        }
+
+        & > .internal-links,
+        & > .external-links {
+            display: none;
+        }
+
+        & > .mobile-links {
+            display: inline-block;
+        }
     }
 }

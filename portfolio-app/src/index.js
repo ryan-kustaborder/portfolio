@@ -5,7 +5,9 @@ import "./index.scss";
 import "./gallery.scss";
 import "./noise.scss";
 import App from "./App";
-import Gallery from "./gallery/Gallery";
+import Gallery from "./Gallery";
+import Resume from "./Resume";
+import Projects from "./Projects";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,6 +16,8 @@ root.render(
         <HashRouter>
             <Routes>
                 <Route path="/" element={<App />}></Route>
+                <Route path="/projects" element={<Projects />}></Route>
+                <Route path="/resume" element={<Resume />}></Route>
                 <Route path="/gallery" element={<Gallery />}></Route>
             </Routes>
         </HashRouter>
