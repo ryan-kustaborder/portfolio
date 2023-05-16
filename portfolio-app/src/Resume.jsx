@@ -23,6 +23,10 @@ function Resume() {
                     <p>Honors:</p>
                     <ul>
                         <li>
+                            Washkewicz College of Engineering Valedictorian CS
+                            Nominee (Spring 2023)
+                        </li>
+                        <li>
                             Washkewicz College of Engineering Student
                             Achievement Award (2019)
                         </li>

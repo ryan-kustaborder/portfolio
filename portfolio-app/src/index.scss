@@ -16,7 +16,7 @@
 
 #content {
     background-color: white;
-    padding: 0px 32px 32px 32px;
+    padding: 0px 256px 64px 256px;
     margin: 32px 128px;
 }
 
@@ -27,9 +27,9 @@
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     max-height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid black;
 
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
@@ -246,13 +246,77 @@ header {
     }
 }
 
+#UXCaseStudyDetails {
+    padding-bottom: 128px;
+}
+
+.return-to-projects {
+    margin: 32px 0 32px 128px;
+
+    & a {
+        font-size: 18px;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+#content.writeup {
+    border: 1px solid black;
+    box-shadow: 0px 0px 60px 0px #00000074;
+    padding: 0;
+    padding-bottom: 32px;
+
+    & > h1 {
+        text-transform: uppercase;
+        font-size: 16px;
+
+        border-bottom: 0.5px solid black;
+        padding: 4px 8px;
+    }
+
+    & .image-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    & .image-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    & img {
+        width: auto;
+        margin-bottom: 32px;
+    }
+
+    & p {
+        line-height: 24px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
-    #content {
+    #content,
+    .writeup {
         padding: 16px;
         margin: 16px;
 
         display: flex;
         flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: auto;
+        margin: 32px 0;
+        padding: 0 16px;
+    }
+
+    .return-to-projects {
+        margin: 16px 0 16px 16px;
+    }
+
+    #resume h1 {
+        font-size: 48px;
     }
 
     h1 {

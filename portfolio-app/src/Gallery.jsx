@@ -15,6 +15,8 @@ import Skyline from "./gallery/design/skyline/skyline.png";
 
 import BigHero6 from "./gallery/design/BigHero6.png";
 
+import WhitePaper from "./gallery/design/WhitePaper.png";
+
 function Gallery() {
     const images = [
         Inferno,
@@ -22,6 +24,7 @@ function Gallery() {
         BigHero6,
         Rodchenko,
         LayoutSeries3,
+        WhitePaper,
         Skyline,
         LayoutSeries4,
         LayoutSeries5,

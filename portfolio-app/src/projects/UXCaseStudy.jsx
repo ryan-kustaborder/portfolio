@@ -1,8 +1,8 @@
 import React from "react";
 import * as Icons from "react-feather";
+import { HashLink } from "react-router-hash-link";
 
 import Wireflow from "../images/UXCaseStudy/wireflow.png";
-import Process from "../images/UXCaseStudy/process.pdf";
 
 function UXCaseStudy() {
     return (
@@ -21,10 +21,10 @@ function UXCaseStudy() {
                     them, and finally create high-fidelity prototypes.
                 </p>
                 <div className="icon-link">
-                    <Icons.File />
-                    <a href={Process} target="_blank">
-                        View Process Book
-                    </a>
+                    <Icons.Info />
+                    <HashLink smooth to="/projects/UXCaseStudy">
+                        View More
+                    </HashLink>
                 </div>
             </div>
         </>
