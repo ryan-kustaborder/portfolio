@@ -2,9 +2,9 @@ import Header from "./Header";
 import * as Icons from "react-feather";
 import { HashLink } from "react-router-hash-link";
 
-import AccessibilityMatters from "./projects/AccessibilityMatters";
-import ModularInfographic from "./projects/ModularInfographic";
-import UXCaseStudy from "./projects/UXCaseStudy";
+import ModularInfographicImage from "./images/ModularInfographic.png";
+import AccessibilityMattersImage from "./images/accmat.png";
+import UXCaseStudyImage from "./images/UXCaseStudy/wireflow.png";
 
 export default function App() {
     return (
@@ -20,18 +20,22 @@ export default function App() {
                     Gallery pages to see more!
                 </p>
 
-                <div className="span--5">
-                    <h2>Featured Projects</h2>
-                    <div className="icon-link">
-                        <HashLink smooth to="/projects">
-                            View All
-                        </HashLink>
-                    </div>
-                </div>
+                <h2 className="span--4">Projects</h2>
 
-                <UXCaseStudy />
-                <ModularInfographic />
-                <AccessibilityMatters />
+                <HashLink className="span--2 img-link" smooth to="/projects">
+                    <div>Modular Infographic</div>
+                    <img src={ModularInfographicImage}></img>
+                </HashLink>
+
+                <HashLink className="span--2 img-link" smooth to="/projects">
+                    <div>Accessibility Matters.</div>
+                    <img src={AccessibilityMattersImage}></img>
+                </HashLink>
+
+                <HashLink className="span--2 img-link" smooth to="/projects">
+                    <div>UX Case Study</div>
+                    <img src={UXCaseStudyImage}></img>
+                </HashLink>
             </div>
         </div>
     );
